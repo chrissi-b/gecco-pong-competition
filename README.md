@@ -1,4 +1,4 @@
-# pong-competition
+# gecco-pong-competition
 
 ## Install
 
@@ -7,8 +7,8 @@ Clone the repository
 Create a Python virtual environment (must be at least Python 3.9.21):
 
 ```shell
-git clone https://github.com/chrissi-b/pong-competition.git
-cd pong-competition
+git clone https://github.com/chrissi-b/gecco-pong-competition.git
+cd gecco-pong-competition
 python3 -m venv pongvenv
 source pongvenv/bin/activate
 pip3 install -r requirements.txt
