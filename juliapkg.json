@@ -1,0 +1,70 @@
+{
+    "julia": "=1.10.5",
+    "packages": {
+    	"DataFrames": {
+    	    "uuid": "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+    	},
+        "DataStructures": {
+            "uuid": "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
+        },
+        "Dates": {
+            "uuid": "ade2ca70-3891-5945-98fb-dc099432e06a"
+        },
+        "Distances": {
+            "uuid": "b4f34e82-e78d-54a5-968a-f98e89d6e8f7"
+        },
+        "ErrorTypes": {
+            "uuid": "7f495686-c6d2-4c77-9e8e-e4c865675f9d"
+        },
+        "FileIO": {
+            "uuid": "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
+        },
+        "IJulia": {
+            "uuid": "7073ff75-c697-5162-941a-fcdaad2a7d2a"
+        },
+        "ImageCore": {
+            "uuid": "a09fc81d-aa75-5fe9-8630-4744c3626534"
+        },
+        "ImageIO": {
+            "uuid": "82e4d734-157c-48bb-816b-45c225c6df19"
+        },
+        "JSON": {
+            "uuid": "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+        },
+        "Logging": {
+            "uuid": "56ddb016-857b-54e1-b83d-db4d58db5568"
+        },
+        "Pkg": {
+            "uuid": "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+        },
+        "PythonCall": {
+            "uuid": "6099a3de-0909-46bc-b1f4-468b9a2dfc0d",
+            "version": "=0.9.25"
+        },
+        "Random": {
+            "uuid": "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+        },
+        "Revise": {
+            "uuid": "295af30f-e4ad-537b-8983-00126c2a3abe"
+        },
+        "Statistics": {
+            "uuid": "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+        },
+        "StatsBase": {
+            "uuid": "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
+        },
+        "ThreadPinning": {
+            "uuid": "811555cd-349b-4f26-b7bc-1f208b848042"
+        },
+        "ThreadPools": {
+            "uuid": "b189fb0b-2eb5-4ed4-bc0c-d34c51242431"
+        },
+        "UUIDs": {
+            "uuid": "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
+        },
+        "UnicodePlots": {
+            "uuid": "b8865327-cd53-5732-bb35-84acbb429228"
+        }
+    }
+}
+
