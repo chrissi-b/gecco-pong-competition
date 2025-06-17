@@ -45,15 +45,15 @@ This is an example of the intermediary outputs of nodes (functions) in the graph
 
 frame1 | frame2 | frame3 | frame4 
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![](TODO add img) | ![](TODO add img) | ![](TODO add img) | ![](TODO add img) 
+<img src="/best-policy-screens/input1.png" width="400"> | <img src="/best-policy-screens/input2.png" width="400">  | <img src="/best-policy-screens/input3.png" width="400"> | <img src="/best-policy-screens/input4.png" width="400"> 
 
 
 ### Program for NOOP prediction
 function | output
 :-------------------------:|:-------------------------:
 horizontal_argmax(frame3) | 32
-horizontal_notmaskfromto(frame3, 0.0, 30.0) | TODO add img
-opening(horizontal_notmaskfromto, horizontal_argmax) | TODO add img
+horizontal_notmaskfromto(frame3, 0.0, 30.0) | <img src="/best-policy-screens/notmaskfromtoh.png" width="300">
+opening(horizontal_notmaskfromto, horizontal_argmax) | <img src="/best-policy-screens/opening.png" width="300">
 center_of_mass(frame2) | (31, 42)
 argmin_position(opening) | (31, 1)
 true_greatherthan(center_of_mass, argmin_position) | 0.0
@@ -62,14 +62,14 @@ true_greatherthan(center_of_mass, argmin_position) | 0.0
 ### Program for DOWN prediction
 function | output
 :-------------------------:|:-------------------------:
-erosion(frame3, 60.0) | TODO add img
-relative_horizontal_notmaskfromto(erosion, 1.0, 2.0) | TODO add value
+erosion(frame3, 60.0) | <img src="/best-policy-screens/erosion.png" width="300">
+relative_horizontal_notmaskfromto(erosion, 1.0, 2.0) | <img src="/best-policy-screens/rel_notmaskfromtoh.png" width="300">
 reduce_maximum(relative_horizontal_notmaskfromto) | 0.3412
-**output_down** | **TODO** 
+**output_down** | **0.3412** 
 
 ### Program for UP prediction
 function | output
 :-------------------------:|:-------------------------:
-sobely_filter(frame3, 2.0) | TODO add img
+sobely_filter(frame3, 2.0) | <img src="/best-policy-screens/sobely.png" width="300">
 reative_vertical_argmax(sobely_filter) | 0.6667
-**output_up** | **TODO** 
+**output_up** | **0.6667** 
