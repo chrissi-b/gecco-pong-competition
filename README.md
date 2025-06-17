@@ -64,12 +64,12 @@ function | output
 :-------------------------:|:-------------------------:
 erosion(frame3, 60.0) | TODO add img
 relative_horizontal_notmaskfromto(erosion, 1.0, 2.0) | TODO add value
-reduce_maximum(relative_horizontal_notmaskfromto) | TODO add value
+reduce_maximum(relative_horizontal_notmaskfromto) | 0.3412
 **output_down** | **TODO** 
 
 ### Program for UP prediction
 function | output
 :-------------------------:|:-------------------------:
 sobely_filter(frame3, 2.0) | TODO add img
-reative_vertical_argmax(sobely_filter) | TODO add value
+reative_vertical_argmax(sobely_filter) | 0.6667
 **output_up** | **TODO** 
