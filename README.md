@@ -81,3 +81,12 @@ function | output
 sobely_filter(frame3, 2.0) | <img src="/best-policy-screens/sobely.png" width="300">
 reative_vertical_argmax(sobely_filter) | 0.6667
 **output_up** | **0.6667** 
+
+
+## Policy Breakdown
+
+Below are two GIFs showing the first few points for seed 1 and 7 generated with the presented policy
+
+S1 | S7 
+:-------------------------:|:-------------------------:
+![](/best-policy-screens/seed1.gif)  |  ![](/best-policy-screens/seed7.gif)
