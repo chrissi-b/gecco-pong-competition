@@ -33,7 +33,6 @@ using ThreadPools
 CROPS = Dict(
     "pong" => (15:77, 1:84)
 )
-#GAMENAME = "PongNoFrameskip-v4"
 GAMENAME = "Pong-v4"
 GAME = "pong"
 const CROP = CROPS[GAME]

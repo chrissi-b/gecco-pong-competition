@@ -28,14 +28,22 @@ cp -r juliafolders/* pongvenv/julia_env/
 
 ## Repository Content
 
-## Run files
+### Run files
 
 Files take different environment variables that have to be provided for successful execution:
-- **optimization.py** no environment variables needed, runs with static variables for demonstration purposes
-- **run_from_pickle.py** takes the folder, the checkpoint of optimization (modulo of 5), and the seed range that needs to be evaluated (start and end seed):
-	- python3 run_from_pickle.py best_fitness 1500 1 10
-- **run_from_pseudocode.py** takes the seed range that needs to be evaluated (start and end seed):
+- **optimization.py** no environment variables needed, runs with static variables that were used to generate the presented policy for demonstration purposes (see paper for evolution parameters). Running this file requires 12 available threads.
+- **run_from_pickle.py** takes the folder, the checkpoint of optimization (modulo of 5), and the seed range that needs to be evaluated (start and end seed). The graph presented in the paper was generated after 1500 generations and can be tested as follows:
+	- python3 run_from_pickle.py best_policy 1500 1 10
+- **run_from_pseudocode.py** takes the seed range that needs to be evaluated (start and end seed). Pseudocode is generated based on the graph after 1500 generations:
 	- python3 run_from_pseudocode.py 1 10
+
+### Optimization log
+
+Three different files can be used to verify the progression of the policy during the performed optimization
+- **optimization_log.html** is an exported jupyter notebook that shows the convergence curve of the best policy, as well as other runs performed for this project
+- **ga_metrics/pong/best_policy/metrics123.json** is the input that was used to plot the convergence curve in optimization_log.html
+- **ga_metrics/pong/best_policy/log.out** and **ga_metrics/pong/best_policy/log.err** contains the raw output generated during optimization 
+
 
 ## Policy Breakdown
 

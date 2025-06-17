@@ -6,10 +6,6 @@ using .PongCompetition
 using PythonCall
 NP = pyimport("numpy")
 
-println("This is the run_pong.jl script")
-
-greet()
-
 using Logging
 using Base.Threads
 import JSON
@@ -36,7 +32,7 @@ using ThreadPools
 CROPS = Dict(
     "pong" => (15:77, 1:84)
 )
-GAMENAME = "PongNoFrameskip-v4"
+GAMENAME = "Pong-v4"
 GAME = "pong"
 const CROP = CROPS[GAME]
 env_ex = pool(GAMENAME, [1])
@@ -97,7 +93,7 @@ folder = joinpath(folder, hash)
 
 ### RUN CONF ###
 pop_size = nthreads()
-gens = 10
+gens = 2500
 mut_rate = 1.1
 output_mut_rate = 0.1
 

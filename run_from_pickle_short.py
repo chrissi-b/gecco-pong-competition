@@ -26,8 +26,8 @@ path = "pongvenv/julia_env/scripts/run_pong_short.jl"
 with open(path) as f:
     juliacode = f.read()
 
-seed_change_threshold = '"1"'
-random_seed = '"111"'
+seed_change_threshold = '"2501"'
+random_seed = '"123"'
 module_path = '"pongvenv/julia_env/src/PongCompetition.jl"'
 utils_path = f'"pongvenv/julia_env/scripts/utils.jl"'
 extra_fns_path = f'"pongvenv/julia_env/scripts/extra_fns.jl"'

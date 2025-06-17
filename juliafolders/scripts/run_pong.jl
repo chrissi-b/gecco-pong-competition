@@ -6,10 +6,6 @@ using .PongCompetition
 using PythonCall
 NP = pyimport("numpy")
 
-println("This is the run_pong.jl script")
-
-greet()
-
 using Logging
 using Base.Threads
 import JSON
@@ -112,7 +108,7 @@ mkdir(folder)
 
 ### RUN CONF ###
 pop_size = nthreads()
-gens = 10
+gens = 2500
 mut_rate = 1.1
 output_mut_rate = 0.1
 
