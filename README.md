@@ -83,7 +83,7 @@ reative_vertical_argmax(sobely_filter) | 0.6667
 **output_up** | **0.6667** 
 
 
-## Policy Breakdown
+## GIFs
 
 Below are two GIFs showing the first few points for seed 1 and 7 generated with the presented policy
 
