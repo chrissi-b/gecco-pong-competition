@@ -22,12 +22,12 @@ jl.seval("""
          println(versioninfo())
          """)
 
-path = "pongvenv/julia_env/scripts/run_pong.jl"
+path = "pongvenv/julia_env/scripts/run_pong_short.jl"
 with open(path) as f:
     juliacode = f.read()
 
-seed_change_threshold = '"1"'
-random_seed = '"111"'
+seed_change_threshold = '"2501"'
+random_seed = '"123"'
 module_path = '"pongvenv/julia_env/src/PongCompetition.jl"'
 utils_path = f'"pongvenv/julia_env/scripts/utils.jl"'
 extra_fns_path = f'"pongvenv/julia_env/scripts/extra_fns.jl"'
@@ -41,16 +41,13 @@ replace_tuples = [("ARGS[1]", seed_change_threshold),
                   ('"src/PongCompetition.jl"', module_path)
                  ]
 
+
 juliacode_formatted = juliacode
 for t in replace_tuples:
     juliacode_formatted = juliacode_formatted.replace(t[0], t[1])
 
 
-cutting_point = "### CUT HERE FOR DESERIALIZATION"
-juliacode_deserialization = juliacode_formatted.split(cutting_point)[0]
-
-print(f"Formatted juliacode for deserialization: {juliacode_deserialization}")
-jl.seval(f""" {juliacode_deserialization} """)
+jl.seval(f""" {juliacode_formatted} """)
 
 jl.seval(f"""
     using Serialization
@@ -83,11 +80,11 @@ fitnesses = [round(p[0][0]) for p in jl.F]
 own_points = [round(p[0][0]) for p in jl.OWN_POINTS]
 opp_points = [round(p[0][0]) for p in jl.OPP_POINTS]
 
-print("Fitness all seeds after 30 000 frames:")
+print("Fitness all seeds after a max of 30 000 frames:")
 print(fitnesses)
-print("Own points all seeds after 30 000 frames:")
+print("Own points all seeds after a max of 30 000 frames:")
 print(own_points)
-print("Opponent points all seeds after 30 000 frames:")
+print("Opponent points all seeds after a max of 30 000 frames:")
 print(opp_points)
 print("Termination points all seeds:")
 jl.seval('[i[end]["it"] for i in ST]')
@@ -103,10 +100,6 @@ print(f"Mean own points: {float(np.mean(own_points))}")
 print(f"Std own points: {float(np.std(own_points))}")
 print(f"Mean opponent points: {float(np.mean(opp_points))}")
 print(f"Std own points: {float(np.std(opp_points))}")
-
-
-# or allow to define number of seeds which can be either random or defined manually
-# todo change number of frames played
 
 
 
