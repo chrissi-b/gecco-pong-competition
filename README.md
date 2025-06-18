@@ -47,6 +47,8 @@ You can run ```python3 {run_file} --help``` for more information on environment 
 
 Running *optimization.py* will create a new folder with pickle files of the generated policies in the *ga_metrics/pong* folder. You can test your own graphs with the *run_from_pickle.py* file by defining -p {your run ID} and -cp the checkpoint you want to evaluate (modulo of 5, range depends on how long you run the optimization for). The number of generations defined in *optimization.py* is set to 2500, so finishing the entire evolution is costly. You can early stop with Ctrl+C and still have access to the generated pickles up to that point.
 
+Example: ``` python3 run_from_pickle.py -p 287834d2-f9c9-4cac-8655-a2e51c8739ae -cp 5 -s 1 -e 5 ```
+
 ### Optimization log
 
 Three different files can be used to verify the progression of the policy during the performed optimization
