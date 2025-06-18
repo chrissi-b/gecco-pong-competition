@@ -30,11 +30,11 @@ cp -r juliafolders/* pongvenv/julia_env/
 
 ### Run files
 
-Files take different environment variables that have to be provided for successful execution:
+Th run files can be used to replicate the optimization process and test the policy performance. The policy is available as a serialized file (pickle) that was directly generated during optimization, and as pseudocode, which was created manually after policy generation and uses the exact same functions that were used to generate the graph. Files take different environment variables that have to be provided for successful execution:
 - **optimization.py** no environment variables needed, runs with static variables that were used to generate the presented policy for demonstration purposes (see paper for evolution parameters). Running this file requires 12 available threads.
-- **run_from_pickle.py** takes the folder, the checkpoint of optimization (modulo of 5), and the seed range that needs to be evaluated (start and end seed). The graph presented in the paper was generated after 1500 generations and can be tested as follows:
+- **run_from_pickle.py** takes the folder, the checkpoint of optimization (modulo of 5 in range 5 to 1725), and the seed range that needs to be evaluated (start and end seed). The graph presented in the paper was generated after 1500 generations and can be tested as follows:
 	- python3 run_from_pickle.py best_policy 1500 1 10
-- **run_from_pseudocode.py** takes the seed range that needs to be evaluated (start and end seed). Pseudocode is generated based on the graph after 1500 generations:
+- **run_from_pseudocode.py** takes the seed range that needs to be evaluated (start and end seed). The pseudocode is generated based on the graph after 1500 generations:
 	- python3 run_from_pseudocode.py 1 10
 
 ### Optimization log
