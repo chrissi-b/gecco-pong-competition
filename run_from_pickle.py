@@ -3,11 +3,29 @@
 import os
 import sys
 import numpy as np
+import argparse
 
-folder = sys.argv[1]
-checkpoint = int(sys.argv[2])
-seed_start = int(sys.argv[3])
-seed_end = int(sys.argv[4])
+parser = argparse.ArgumentParser(
+    description='gecco-pong-competition')
+
+parser.add_argument('-p', '--policy', default='best_policy', required=False,
+                    help='Folder name of policy.')
+                    
+parser.add_argument('-cp', '--checkpoint', default = '1500', required=False,
+                    help='Checkpoint to be evaluated. Must be a modulo of 5 in the range 5 to 1725 when evaluating best_policy.')
+                    
+parser.add_argument('-s', '--startseed', default = '1', required=False,
+                    help='Start of seed range to be evaluated.')
+                    
+parser.add_argument('-e', '--endseed', default = '10', required=False,
+                    help='End of seed range to be evaluated. Must be greather or equal to startseed.')                   
+    
+args = parser.parse_args()
+
+folder = args.policy
+checkpoint = int(args.checkpoint)
+seed_start = int(args.startseed)
+seed_end = int(args.endseed)
 
 print(f"Getting payload for folder {folder} at checkpoint {checkpoint}")
 

@@ -1,9 +1,19 @@
 # optimization file, i.e., a Python script, from which the optimization process can be reproduced
 
 import os
+import argparse
+
+parser = argparse.ArgumentParser(description='gecco-pong-competition')
+parser.add_argument('-t', '--threads', default='12', required=False,
+                    help='Number of threads, needs to be minimum 3.')
+                    
+parser.add_argument('-rs', '--randomseed', default = '123', required=False,
+                    help='Seed for Random generator.')                 
+    
+args = parser.parse_args()
 
 os.environ['PYTHON_JULIACALL_HANDLE_SIGNALS'] = 'yes'
-os.environ['JULIA_NUM_THREADS'] = '12'
+os.environ['JULIA_NUM_THREADS'] = args.threads
 
 from juliacall import Main as jl
 
@@ -17,7 +27,7 @@ with open(path) as f:
     juliacode = f.read()
 
 seed_change_threshold = '"2501"'
-random_seed = '"123"'
+random_seed = f'"{args.randomseed}"'
 module_path = '"pongvenv/julia_env/src/PongCompetition.jl"'
 utils_path = f'"pongvenv/julia_env/scripts/utils.jl"'
 extra_fns_path = f'"pongvenv/julia_env/scripts/extra_fns.jl"'

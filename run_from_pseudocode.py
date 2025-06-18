@@ -2,12 +2,24 @@
 
 import os
 import sys
+import argparse
+
+parser = argparse.ArgumentParser(
+    description='gecco-pong-competition')
+                    
+parser.add_argument('-s', '--startseed', default = '1', required=False,
+                    help='Start of seed range to be evaluated.')
+                    
+parser.add_argument('-e', '--endseed', default = '10', required=False,
+                    help='End of seed range to be evaluated. Must be greater or equal to startseed.')                   
+    
+args = parser.parse_args()
 
 os.environ['PYTHON_JULIACALL_HANDLE_SIGNALS'] = 'yes'
 os.environ['JULIA_NUM_THREADS'] = '1'
 
-seed_start = int(sys.argv[1])
-seed_end = int(sys.argv[2])
+seed_start = int(args.startseed)
+seed_end = int(args.endseed)
 
 from juliacall import Main as jl
 import numpy as np
