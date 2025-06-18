@@ -2,6 +2,12 @@
 
 ## Install
 
+This repository runs on Linux (Ubuntu) and MacOS. If you use Debian or Windows Subsystem for Linux (WSL), you might encounter some errors with the opencv library that will be installed in the following step - this code can help:
+```shell
+sudo apt update && sudo apt upgrade
+sudo apt install libgl1 libglib2.0-0
+```
+
 Clone the repository and reate a Python virtual environment (must be at least Python 3.9.21).
 
 ```shell
