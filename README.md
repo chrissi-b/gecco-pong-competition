@@ -28,7 +28,7 @@ cp -r juliafolders/* pongvenv/julia_env/
 
 ### Run files
 
-Th run files can be used to replicate the optimization process and test the policy performance. The policy is available as a serialized file (pickle) that was directly generated during optimization, and as pseudocode, which was created manually after policy generation and uses the exact same functions that were used to generate the graph. Running from pseudocode is faster than running from pickle. The first execution can take considerably longer than the subsequent ones.
+Th run files can be used to replicate the optimization process and test the policy performance. The policy is available as a serialized file (pickle) that was directly generated during optimization, and as code, which was created manually after policy generation and uses the exact same functions that were used to generate the graph. Running from code is faster than running from pickle. The first execution can take considerably longer than the subsequent ones.
 
 Files take different environment variables that have to be provided for successful execution, however fallbacks are implemented:
 - **optimization.py** takes the number of threads (population size) and the Random seed. Fallbacks are the variables that were used to generate the presented policy (12 threads, seed 123). The number of threads needs to be minimum 3. Running with fallbacks requires 12 available threads. 
@@ -37,9 +37,9 @@ Files take different environment variables that have to be provided for successf
 - **run_from_pickle.py** takes the folder, the checkpoint of optimization (modulo of 5 in range 5 to 1725), and the seed range that needs to be evaluated (start and end seed). The fallback values evaluates the graph presented in the paper (best_policy at generation 1500) on the environments 1 to 10:
 	- with fallback: ```python3 run_from_pickle.py ```
 	- without fallback: ```python3 run_from_pickle.py -p best_policy -cp 1500 -s 1 -e 10 ```
-- **run_from_pseudocode.py** takes the seed range that needs to be evaluated (start and end seed). The pseudocode is generated based on the graph after 1500 generations, and the fallback values evaluates the graph on the environments 1 to 10:
-	- with fallback: ```python3 run_from_pseudocode.py ```
-	- without fallback: ```python3 run_from_pseudocode.py -s 1 -e 10```
+- **run_from_code.py** takes the seed range that needs to be evaluated (start and end seed). The code is generated based on the graph after 1500 generations, and the fallback values evaluates the graph on the environments 1 to 10:
+	- with fallback: ```python3 run_from_code.py ```
+	- without fallback: ```python3 run_from_code.py -s 1 -e 10```
 
 #### Remarks 
 
