@@ -2,13 +2,21 @@
 
 ## Install
 
-This repository runs on Linux (Ubuntu) and MacOS. If you use Debian or Windows Subsystem for Linux (WSL), you might encounter some errors with the opencv library that will be installed in the following step - this code can help:
+This repository was tested on Linux (Ubuntu) and MacOS. If you use Debian or Windows Subsystem for Linux (WSL), you might encounter some errors with the opencv library that will be installed in the following step - this code can help:
 ```shell
 sudo apt update && sudo apt upgrade
 sudo apt install libgl1 libglib2.0-0
 ```
 
-Clone the repository and reate a Python virtual environment (must be at least Python 3.9.21).
+Clone the repository and reate a Python virtual environment (this repository was tested on Python 3.11 and Python 3.12). If you do not have either installed you may follow instructions on [THIS](https://askubuntu.com/questions/1489046/is-there-a-way-to-install-python-3-12-on-ubuntu-23-04-through-apt) website, or by executing these commands:
+
+
+```shell
+# **only execute if you need to install required Python version**
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.12-venv
+```
 
 ```shell
 git clone https://github.com/chrissi-b/gecco-pong-competition.git
