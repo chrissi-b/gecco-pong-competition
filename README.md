@@ -2,7 +2,7 @@
 
 ## Install
 
-This repository was tested on Linux (Ubuntu) and MacOS. If you use Debian or Windows Subsystem for Linux (WSL), you might encounter some errors with the opencv library that will be installed in the following step - this code can help:
+This repository was tested on Linux (Ubuntu Ubuntu 22.04.5 LTS Intel® Core™ i7-10850H CPU @ 2.70GHz × 12) and MacOS (Sequoia 15.5 2,7 GHz Quad-Core Intel Core i7). If you use Debian or Windows Subsystem for Linux (WSL), you might encounter some errors with the opencv library that will be installed in the following step - this code can help:
 ```shell
 sudo apt update && sudo apt upgrade
 sudo apt install libgl1 libglib2.0-0
