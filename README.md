@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade
 sudo apt install libgl1 libglib2.0-0
 ```
 
-Clone the repository and reate a Python virtual environment (this repository was tested on Python 3.11 and Python 3.12). If you do not have either installed you may follow instructions on [THIS](https://askubuntu.com/questions/1489046/is-there-a-way-to-install-python-3-12-on-ubuntu-23-04-through-apt) website, or by executing these commands:
+Clone the repository and create a Python virtual environment (this repository was tested on Python 3.11 and Python 3.12). If you do not have either installed you may follow instructions on [THIS](https://askubuntu.com/questions/1489046/is-there-a-way-to-install-python-3-12-on-ubuntu-23-04-through-apt) website, or by executing these commands:
 
 
 ```shell
