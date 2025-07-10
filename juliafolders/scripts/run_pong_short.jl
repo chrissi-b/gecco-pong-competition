@@ -44,6 +44,12 @@ IMAGE_TYPE = typeof(SImageND(example))
 IMG_SIZE = example |> size
 PROB_ACTION = false
 
+# DEFINE IMAGE SIZE
+state_view = view(obs_, [1])
+previous_obs = state_view
+s = size(previous_obs[1][1, CROP[1], CROP[2]])
+S = Tuple{s[1],s[2]}
+
 # DON'T USE
 CUSTOM_SEEDS = [1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 13, 14, 16, 19, 21, 22, 23, 25, 27, 28, 29, 30, 32, 38, 57, 65, 67, 73, 106, 130]
 

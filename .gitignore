@@ -1,3 +1,5 @@
 ga_metrics/pong/*
 !ga_metrics/pong/best_policy
 pongvenv
+.ipynb_checkpoints
+__pycache__

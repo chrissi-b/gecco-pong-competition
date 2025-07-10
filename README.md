@@ -116,3 +116,11 @@ Below are two GIFs showing the first few points for seed 1 and 7 generated with 
 S1 | S7 
 :-------------------------:|:-------------------------:
 ![](/best-policy-screens/seed1.gif)  |  ![](/best-policy-screens/seed7.gif)
+
+
+- - - - - - - - - - - - - - - - - - - - - - - 
+
+## Run files competition
+
+To comply with competition requirements, the second version of this repository includes a run file initializing the environment and calling a custom Controller in the `controller.py` file for action prediction.
+- **run_with_preprocessing.py**: This file runs the policy presented above and in the paper. After initialising the environment, we apply pre-processing to resize and scale observations and make them grayscale. We add a FrameStackObservation of 4, which makes the environment return the 4 latest frames, serving as input for our policy. What is crucial to obtain the same policy as presented in the paper is the frame skip of 4. We trained our policy with this setting to speed up the optimization process and avoid overfitting on minor changes in the environment.
